@@ -1,11 +1,13 @@
 import React from 'react'
 import { View, Text, StyleSheet, Button } from 'react-native'
+import Header from '../Header/Header'
 
 export default function Contact( { navigation } ) {
   return (
     <View style={ styles.container } >
+      <Header title='Contact' navigation={ navigation } />
       <View style={ styles.content } >
-        <Text style={ styles.text } >Contact is here !</Text>
+        <Text style={ styles.text } >Contact is here</Text>
         <Button title='Go back' onPress={ () => navigation.goBack() } />
       </View>
     </View>
