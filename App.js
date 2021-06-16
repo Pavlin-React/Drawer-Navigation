@@ -1,8 +1,11 @@
 import React from 'react';
-import StackNavigation from './Navigators/StackNavigation'
+import TabBarNavigator from './Navigators/TabBarNavigator'
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
 export default function App() {
   return(
-    <StackNavigation/>
+    <SafeAreaProvider>
+      <TabBarNavigator/>
+    </SafeAreaProvider>
   )
 }

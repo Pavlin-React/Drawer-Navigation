@@ -6,7 +6,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 function Home( { navigation } ) {
   return(
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'aqua' }} >
-      <Text style={{ fontSize: 20, color: 'black' }} >Home is here !</Text>
+      <Text style={{ fontSize: 20, color: 'black' }} >Home is here ?</Text>
       <Button title='Go to Content' onPress={ () => navigation.navigate( 'Content' ) } />
     </View>
   )

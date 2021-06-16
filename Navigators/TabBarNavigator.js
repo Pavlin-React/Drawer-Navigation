@@ -1,7 +1,9 @@
 import React from "react";
-import { View, Text, Button } from "react-native";
+import { View, Text } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
+
 
 function Home() {
   return(
@@ -34,36 +36,33 @@ function About() {
 const Tab = createMaterialTopTabNavigator();
 
 function MyTabs() {
+
+  let insets = useSafeAreaInsets()
+
   return (
     <Tab.Navigator
       initialRouteName="Home"
       tabBarOptions={{
-        activeTintColor: "aqua",
+        activeTintColor: "black",
         labelStyle: { fontSize: 12 },
-        style: { backgroundColor: "white" },
+        style: { backgroundColor: "coral", marginTop: insets.top }
       }}
     >
       <Tab.Screen
         name="Home"
         component={Home}
         options={{ tabBarLabel: "Home" }}
-      >
-        Home
-      </Tab.Screen>
+      />
       <Tab.Screen
         name="Contact"
         component={Contact}
         options={{ tabBarLabel: "Contact" }}
-      >
-        Contact
-      </Tab.Screen>
+      />
       <Tab.Screen
         name="About"
         component={About}
         options={{ tabBarLabel: "About" }}
-      >
-        About
-      </Tab.Screen>
+      />
     </Tab.Navigator>
   );
 }
@@ -73,5 +72,6 @@ export default function TabBarNavigator() {
     <NavigationContainer>
       <MyTabs />
     </NavigationContainer>
+
   );
 }
