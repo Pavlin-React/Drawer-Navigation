@@ -45,7 +45,7 @@ function MyTabs() {
       tabBarOptions={{
         activeTintColor: "black",
         labelStyle: { fontSize: 12 },
-        style: { backgroundColor: "coral", marginTop: insets.top }
+        style: { backgroundColor: "white", marginTop: insets.top }
       }}
     >
       <Tab.Screen
@@ -68,10 +68,7 @@ function MyTabs() {
 }
 
 export default function TabBarNavigator() {
-  return (
-    <NavigationContainer>
-      <MyTabs />
-    </NavigationContainer>
+  return <MyTabs />
 
-  );
+
 }

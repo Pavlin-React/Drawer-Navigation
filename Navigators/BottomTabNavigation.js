@@ -3,6 +3,7 @@ import { View, Text, Button } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Ionicons, MaterialIcons } from '@expo/vector-icons';
+import TabBarNavigator from './TabBarNavigator';
 
 function Home() {
   return(
@@ -53,7 +54,7 @@ function MyTab() {
       />
       <Tab.Screen
         name='Contact'
-        component={ Content }
+        component={ TabBarNavigator }
         options={{
           tabBarLabel: 'Contact',
           tabBarIcon: ( { color, size } ) => (
