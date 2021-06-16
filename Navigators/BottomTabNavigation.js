@@ -7,7 +7,7 @@ import { Ionicons, MaterialIcons } from '@expo/vector-icons';
 function Home() {
   return(
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'aqua' }} >
-      <Text style={{ fontSize: 20, fontWeight: '800', color: 'black' }} >Home is here</Text>
+      <Text style={{ fontSize: 20, fontWeight: '800', color: 'black' }} >Home is here !</Text>
     </View>
   )
 }
